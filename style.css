@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+:root {
+  /*color*/
+  --color-primary-Strong-Cyan: hsl(171, 66%, 44%);
+  --color-primary-Light-Blue: hsl(233, 100%, 69%);
+  --color-Neutral-Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --color-Neutral-Grayish-Blue: hsl(201, 11%, 66%);
+  /*font*/
+  --Font-size: 18px;
+  --font-size-header: 30px;
+  --font-weight-reg: 400;
+  --font-weight-semi: 600;
+  --font-family: "Bai Jamjuree", "sans-serif";
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family);
+}
+h1,
+h2,
+h3 {
+  color: var(--color-Neutral-Dark-Grayish-Blue);
+  font-weight: var(--font-weight-semi);
+}
+h1,
+h2 {
+  font-size: var(--font-size-header);
+}
+p {
+  color: var(--color-Neutral-Grayish-Blue);
+  font-weight: var(--font-weight-reg);
+  font-size: var(--Font-size);
+}
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  background-image: url(./images/bg-header-desktop.png);
+  & > img {
+    width: 6%;
+    margin-top: 5%;
+  }
+  & > .intro {
+    margin-top: 4%;
+    text-align: center;
+
+    & > p {
+      width: 65%;
+      margin: 1% 17%;
+    }
+  }
+}
+.btn button {
+  padding: 12px 35px;
+  border-radius: 30px;
+  margin: 25px 5px;
+  border: none;
+  color: white;
+  font-weight: var(--font-weight-reg);
+  cursor: pointer;
+  transition: all 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.btn .ios {
+  background-color: var(--color-primary-Strong-Cyan);
+}
+.btn .ios:hover,
+.btn .mac:hover {
+  opacity: 0.8;
+  scale: 1.05;
+}
+.btn .mac {
+  background-color: var(--color-primary-Light-Blue);
+}
+main {
+  & > .first-section {
+    margin: 8% auto 4%;
+    text-align: center;
+    & > p {
+      width: 48%;
+      margin: 1% 25% 3%;
+    }
+  }
+  & > .seccond-section {
+    display: flex;
+    gap: 5rem;
+    & > .box1 {
+      & > img {
+        width: 95%;
+      }
+    }
+    & > .box2 {
+      margin: 1% auto;
+      text-align: left;
+      & > .part {
+        margin: 7% auto;
+        & > p {
+          margin: 1% 0;
+          width: 60%;
+        }
+      }
+    }
+  }
+  & > .third-section {
+    text-align: center;
+    margin: 7% auto;
+    & > img {
+      width: 70%;
+      margin: 4% auto;
+    }
+    & > p {
+      width: 50%;
+      margin: 1% 25%;
+    }
+  }
+  & > .four-section {
+    display: flex;
+    margin: 5% 7%;
+    text-align: center;
+    gap: 1rem;
+    & > .bx1 {
+      & > img {
+        margin: 4% auto;
+      }
+      & > h3 {
+        margin: 2% auto;
+      }
+      & > p {
+        margin: 2% 8%;
+        width: 75%;
+      }
+    }
+    & > .bx2,
+    .bx3 {
+      & > img {
+        margin: 7% auto;
+      }
+      & > h3 {
+        margin: 3% auto;
+      }
+      & > p {
+        padding: 2% auto;
+        width: 100%;
+      }
+    }
+  }
+  & > .five-section {
+    margin: 8% auto;
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+  }
+  & > .six-section {
+    text-align: center;
+    margin: 8% auto;
+    & > h2 {
+      margin: 2% auto;
+    }
+    & > p {
+      width: 47%;
+      margin: 1% 25%;
+    }
+  }
+}
+footer {
+  background-color: rgb(231, 231, 231);
+  display: grid;
+  align-items: center;
+  height: 120px;
+  grid-template-columns: 20% 50% 30%;
+  & > .logo-img {
+    & > img {
+      width: 20%;
+      margin: auto 50%;
+    }
+  }
+  & > .link {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    & > a {
+      text-decoration: none;
+      padding: 3%;
+      font-weight: var(--font-weight-reg);
+      color: var(--color-Neutral-Dark-Grayish-Blue);
+      transition: all 0.2s;
+    }
+    & > a:hover {
+      color: var(--color-primary-Strong-Cyan);
+    }
+  }
+  & > .social {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 40%;
+    & > .bx {
+      font-size: 30px;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--color-Neutral-Dark-Grayish-Blue);
+    }
+    & > .bx:hover {
+      color: var(--color-primary-Strong-Cyan);
+    }
+  }
+}
+@media (max-width: 500px) {
+  body {
+    overflow-x: auto;
+  }
+  header {
+    background-size: cover;
+    background-image: url(./images/bg-header-mobile.png);
+    & > img {
+      width: 25%;
+      margin-top: 20%;
+    }
+    & > .intro {
+      margin-top: 8%;
+      & > p {
+        font-size: var(--Font-size);
+        width: 100%;
+        margin: 3%;
+      }
+    }
+  }
+  .btn button {
+    padding: 15px 60px;
+    margin: 10px 5px;
+  }
+  main {
+    & > .first-section {
+      margin: 30% auto 4%;
+      text-align: center;
+      & > p {
+        width: 90%;
+        margin: 1% 5% 3%;
+      }
+    }
+    & > .seccond-section {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30%;
+      text-align: center;
+
+      gap: 5rem;
+      & > .box2 {
+        & > .part {
+          margin-left: 4%;
+          text-align: center;
+          & > p {
+            width: 95%;
+          }
+        }
+      }
+    }
+
+    & > .third-section {
+      margin: 30% auto;
+      & > img {
+        width: 90%;
+        margin: 18% auto;
+      }
+      & > p {
+        width: 100%;
+        margin: 0;
+      }
+    }
+    & > .four-section {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+      margin: 30% auto;
+      & > .box {
+        & > p {
+          width: 95%;
+          margin: 2% 0;
+        }
+      }
+    }
+    & > .five-section {
+      margin: 8% 20%;
+      gap: 6rem;
+      flex-direction: column;
+      justify-content: center;
+      & > img {
+        height: 50px;
+        width: 200px;
+      }
+    }
+    & > .six-section {
+      margin: 30% auto;
+      & > h2 {
+        margin: 8% auto;
+      }
+      & > p {
+        width: 95%;
+        margin: 3%;
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    & > .logo-img {
+      & > img {
+        width: 50%;
+        margin: 25% auto;
+      }
+    }
+    & > .link {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    & > .social {
+      justify-content: center;
+      margin: 10% 0;
+    }
+  }
+}
